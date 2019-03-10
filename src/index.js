@@ -1,15 +1,6 @@
-class Hello {
-    static heyThere = 5;
-    static myGod = 7;
+import App from 'app';
 
-    constructor() {
-        this.heyThere = Hello.heyThere;
-    }
+const app = new App();
+app.run();
 
-    greet() {
-        console.log(this.heyThere);
-    }
-}
-
-const hello = new Hello();
-hello.greet();
+window.app = app;
