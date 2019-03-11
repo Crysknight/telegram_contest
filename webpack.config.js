@@ -37,7 +37,8 @@ module.exports = {
     resolve: {
         alias: {
             'app': resolve('src/app'),
-            'constants': resolve('src/constants')
+            'constants': resolve('src/constants'),
+            'utils': resolve('src/utils')
         }
     },
     module: {
@@ -64,6 +65,14 @@ module.exports = {
                 test: /\.html$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'html-loader'
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
     }
